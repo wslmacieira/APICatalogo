@@ -28,9 +28,11 @@ namespace APICatalogo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            string mySqlConnection = Configuration.GetConnectionString("DefaultConnection");
+            
             services.AddDbContext<CatalogoDbContext>(options => 
-            options.UseMySql(Configuration.GetConnectionString("DefaultConnection"), 
-                new MySqlServerVersion(new Version(5, 7, 32))));
+            options.UseMySql(mySqlConnection, ServerVersion.AutoDetect(mySqlConnection)));
+                //new MySqlServerVersion(new Version(5, 7, 32))));
 
             services.AddControllers()
                 .AddNewtonsoftJson();
