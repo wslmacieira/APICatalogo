@@ -15,4 +15,5 @@ namespace APICatalogo.Models
         public string ImagemUrl { get; set; }
 
         public ICollection<Produto> Produtos { get; set; } // propriedade de navegação
+    }
 }
