@@ -56,9 +56,6 @@ namespace APICatalogo.Migrations
                     b.Property<float>("Estoque")
                         .HasColumnType("float");
 
-                    b.Property<int>("IdCategoria")
-                        .HasColumnType("int");
-
                     b.Property<string>("ImagemUrl")
                         .IsRequired()
                         .HasMaxLength(300)

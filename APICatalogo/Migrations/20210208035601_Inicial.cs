@@ -34,8 +34,7 @@ namespace APICatalogo.Migrations
                     ImagemUrl = table.Column<string>(type: "varchar(300) CHARACTER SET utf8mb4", maxLength: 300, nullable: false),
                     Estoque = table.Column<float>(type: "float", nullable: false),
                     DataCadastro = table.Column<DateTime>(type: "datetime(6)", nullable: false),
-                    CategoriaId = table.Column<int>(type: "int", nullable: true),
-                    IdCategoria = table.Column<int>(type: "int", nullable: false)
+                    CategoriaId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {

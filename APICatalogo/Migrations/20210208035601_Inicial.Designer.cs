@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace APICatalogo.Migrations
 {
     [DbContext(typeof(CatalogoDbContext))]
-    [Migration("20210207220551_Inicial")]
+    [Migration("20210208035601_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -57,9 +57,6 @@ namespace APICatalogo.Migrations
 
                     b.Property<float>("Estoque")
                         .HasColumnType("float");
-
-                    b.Property<int>("IdCategoria")
-                        .HasColumnType("int");
 
                     b.Property<string>("ImagemUrl")
                         .IsRequired()

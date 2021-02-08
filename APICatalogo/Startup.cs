@@ -35,7 +35,8 @@ namespace APICatalogo
                 //new MySqlServerVersion(new Version(5, 7, 32))));
 
             services.AddControllers()
-                .AddNewtonsoftJson();
+                .AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling
+                    = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "APICatalogo", Version = "v1" });
