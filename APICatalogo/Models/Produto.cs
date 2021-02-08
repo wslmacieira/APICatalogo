@@ -24,5 +24,6 @@ namespace APICatalogo.Models
         public DateTime DataCadastro { get; set; }
 
         public Categoria Categoria { get; set; }
+        public int IdCategoria { get; set; }
     }
 }
